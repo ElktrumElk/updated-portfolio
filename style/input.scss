@@ -39,8 +39,20 @@ body {
             align-items: center;
             gap: 5rem;
             justify-self: center;
-            background-Image: url('/bg/golden_wring.png');
+           
+            background-size: 50%;
+            background-attachment: scroll;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: bgspin 1s linear infinite;
 
+           .rocket {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: none;
+            z-index: -1;
+           }
             .header {
                 font-size: $fnt-size-2;
                 display: $primary-display;
@@ -73,7 +85,8 @@ body {
                     width: 200px;
                     object-fit: cover;
                     filter: saturate(0);
-                    background: rgba(128, 128, 128, 0.128);
+                    border-radius: 2rem;
+                    background: rgba(128, 128, 128, 0.059);
                 }
 
                 .info {
