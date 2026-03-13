@@ -1,0 +1,226 @@
+body {
+  background-color: rgb(2, 2, 2);
+  color: rgb(248, 248, 248);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  min-height: 100dvh;
+}
+body * {
+  margin: 0;
+}
+
+body .app {
+  display: grid;
+}
+body .app .top_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  justify-self: center;
+  background-Image: url("../bg/golden_wring.png");
+}
+body .app .top_section .header {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  gap: 0.5rem;
+}
+body .app .top_section .header .links {
+  display: flex;
+  gap: 0.5rem;
+}
+body .app .top_section .header .ext-link {
+  width: 20px;
+}
+body .app .top_section .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  width: 80%;
+  padding: 1rem 1rem;
+  border-bottom: 2px solid gray;
+}
+body .app .top_section .profile .profile-image {
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: saturate(0);
+  background: rgba(128, 128, 128, 0.128);
+}
+body .app .top_section .profile .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+body .app .top_section .profile .info .greetings span {
+  border-bottom: 2px solid rgb(0, 144, 188);
+}
+body .app .top_section .profile .info .about {
+  text-align: center;
+  color: rgb(151, 151, 151);
+}
+body .app .top_section .profile .info .contact-button {
+  font-size: 1.3rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: whitesmoke;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(0, 144, 188);
+  padding: 1rem 1rem;
+}
+body .app .top_section .skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 90%;
+  justify-items: center;
+  justify-content: center;
+  border-bottom: 2px solid gray;
+  padding-bottom: 3rem;
+}
+body .app .top_section .skills > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .app .top_section .skills > div span {
+  color: rgb(151, 151, 151);
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+}
+body .app .top_section .skills > div span div {
+  width: 10px;
+  height: 10px;
+  background: orange;
+  border-radius: 6rem;
+}
+body .app .project_cnt {
+  width: 90%;
+  justify-self: center;
+  margin-block-start: 1rem;
+}
+body .app .project_cnt .proj_card_cnt {
+  display: grid;
+  gap: 1rem;
+  margin-block-start: 1rem;
+}
+body .app .project_cnt .proj_card_cnt figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+body .app .project_cnt .proj_card_cnt figure img {
+  width: 100%;
+  height: 15rem;
+  background: rgb(10, 10, 10);
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  place-items: center;
+  border-radius: 1rem;
+  color: white;
+  text-align: center;
+  box-shadow: 0rem 0px 0.5rem rgb(33, 32, 32);
+}
+body .app .project_cnt .proj_card_cnt figure figcaption p {
+  color: rgb(151, 151, 151);
+}
+body .app .footer {
+  margin-block-start: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+body .app .footer form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-block-start: 3rem;
+}
+body .app .footer input {
+  padding: 1rem 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(0, 144, 188);
+  color: whitesmoke;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 920px) {
+  body {
+    justify-content: center;
+    justify-items: center;
+  }
+  body .app {
+    width: 99%;
+  }
+  body .app .top_section .profile {
+    flex-direction: row-reverse;
+    width: 90%;
+    height: 90dvh;
+    justify-content: space-evenly;
+  }
+  body .app .top_section .profile .profile-image {
+    width: 20rem;
+  }
+  body .app .top_section .profile .info {
+    align-items: flex-start;
+  }
+  body .app .top_section .profile .info .greetings {
+    font-size: 3rem;
+  }
+  body .app .top_section .profile .info .about {
+    text-align: left;
+  }
+  body .app .top_section .skills {
+    display: flex;
+    gap: 2rem;
+  }
+  body .app .project_cnt .proj_card_cnt {
+    display: flex;
+    width: 95%;
+    padding-inline: 2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 3.5rem;
+  }
+  body .app .project_cnt .proj_card_cnt::-webkit-scrollbar {
+    display: none;
+  }
+  body .app .project_cnt .proj_card_cnt figure {
+    flex: 0 0 30%;
+    margin: 0;
+    scroll-snap-align: center;
+  }
+  body .app .project_cnt .proj_card_cnt figure img {
+    width: 100%;
+    height: 25rem;
+    display: block;
+  }
+  body .app .footer {
+    display: flex;
+  }
+  body .app .footer form {
+    align-self: flex-start;
+    flex-direction: row;
+  }
+  body .app .footer form button {
+    font-size: 1.3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: whitesmoke;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(0, 144, 188);
+    padding: 1rem 1rem;
+    margin-inline-start: 1rem;
+  }
+}/*# sourceMappingURL=input.css.map */
