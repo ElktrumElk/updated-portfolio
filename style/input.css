@@ -22,14 +22,15 @@ body .app .top_section {
   background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
-  animation: bgspin 1s linear infinite;
 }
 body .app .top_section .rocket {
   position: absolute;
   width: 100%;
   height: 100%;
-  border: none;
   z-index: -1;
+  align-self: center;
+  margin-block-start: 5rem;
+  border: none;
 }
 body .app .top_section .header {
   font-size: 0.8rem;
@@ -178,7 +179,7 @@ body .app .footer input {
   body .app .top_section .profile {
     flex-direction: row-reverse;
     width: 90%;
-    height: 90dvh;
+    min-height: 90dvh;
     justify-content: space-evenly;
   }
   body .app .top_section .profile .profile-image {
@@ -234,5 +235,28 @@ body .app .footer input {
     border-bottom: 1px solid rgb(0, 144, 188);
     padding: 1rem 1rem;
     margin-inline-start: 1rem;
+  }
+}
+@media (orientation: landscape) {
+  body .project_cnt .proj_card_cnt {
+    display: flex;
+    width: 95%;
+    padding-inline: 2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 3.5rem;
+  }
+  body .project_cnt .proj_card_cnt::-webkit-scrollbar {
+    display: none;
+  }
+  body .project_cnt .proj_card_cnt figure {
+    flex: 0 0 50%;
+    margin: 0;
+    scroll-snap-align: center;
+  }
+  body .project_cnt .proj_card_cnt figure img {
+    width: 100%;
+    height: 25rem;
+    display: block;
   }
 }/*# sourceMappingURL=input.css.map */
