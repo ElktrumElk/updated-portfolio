@@ -18,7 +18,7 @@ body .app .top_section {
   align-items: center;
   gap: 5rem;
   justify-self: center;
-  background-Image: url("../bg/golden_wring.png");
+  background-Image: url("/bg/golden_wring.png");
 }
 body .app .top_section .header {
   font-size: 0.8rem;
